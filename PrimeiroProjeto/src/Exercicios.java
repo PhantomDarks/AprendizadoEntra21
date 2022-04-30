@@ -8,7 +8,7 @@ public class Exercicios {
 
     public static void main(String[] args) {
 
-        exe12();
+        exe17();
 
     }
     public static void exe01() {
@@ -242,5 +242,120 @@ public class Exercicios {
 
         }
     }
+    public static void exe13() {
+        Scanner in = new Scanner(System.in);
 
-}
+        System.out.println("Quantas maçãs você quer comprar?");
+
+
+        double b = in.nextDouble();
+        double total = b * 1.30;
+
+        if (b > 12.0) {
+            System.out.println(" R$ " + b);
+        } else {
+
+            System.out.println(" R$ " + total);
+
+        }
+    }
+        public static void exe14() {
+            Scanner in = new Scanner(System.in);
+            System.out.println( "Data de nascimento..." );
+            int data =  in.nextInt();
+            int total = 2022 - data;
+
+            if (total < 15){
+                System.out.println( "Você não pode fazer o titulo de eleitor" );
+
+            }
+            else {
+
+                System.out.println( "Você  pode fazer o titulo de eleitor" );
+
+            }
+        }
+
+             public static void exe15() {
+                 Scanner in = new Scanner(System.in);
+
+                 System.out.println( "Um numero qualquer..." );
+                 double a = in.nextDouble();
+                 System.out.println("Outro numero qualquer...");
+                 double b = in.nextDouble();
+
+                 if (a > b) {
+
+                     System.out.println( "Numero maior é " + a );
+                 }
+
+                 else  {
+                     System.out.println("Numeor maior é " + b);
+
+                 }
+             }
+             public static void exe16() {
+
+                 Scanner in = new Scanner(System.in);
+
+                 System.out.println( "Um numero qualquer..." );
+                 int a = in.nextInt();
+                 System.out.println("Outro numero qualquer...");
+                 double b = in.nextInt();
+
+                 if (a > b) {
+                     System.out.println(b + " Depois " + a);
+
+                 }
+
+                else {
+
+                     System.out.println( a + " Depois " + b);
+
+                 }
+
+
+
+
+
+                 }
+
+                 public static void exe17() {
+                // Hora do inicio ao fim; (Apenas inteiras)
+                     // Calcule a duração em horas
+                     // Max 24 horas
+                     Scanner in = new Scanner(System.in);
+
+                     System.out.println( "Qual hora Aniciou?");
+                    int b = in.nextInt();
+                     System.out.println( "Qual hora Acabou?");
+                    int a = in.nextInt();
+                     int tempo =  a - b + 24 ;
+
+                     if ( a < b) {
+
+                         System.out.println( "Foram = " + tempo);
+
+                     }
+                     else {
+
+
+                         System.out.println("Foram = " + (b - a));
+
+
+                     }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
