@@ -8,7 +8,7 @@ public class Exercicios {
 
     public static void main(String[] args) {
 
-        exe17();
+
 
     }
     public static void exe01() {
