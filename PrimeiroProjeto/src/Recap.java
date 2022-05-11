@@ -119,10 +119,10 @@ public class Recap {
         //System.out.println(var3.equals("teste")); // equals() realiza comparação entre strings
         //System.out.println(var3.toLowerCase()); // toLoweCase() converte os caracteres da string pra minusculo
         //System.out.println(var3.toUpperCase()); // toUpperCase() converte todos os caracteres  da string para maiusculo
-        //System.out.println(var3.contains(1)); //contains() checa se o texto informado contem string do parametro
+//        System.out.println(var3.contains("1")); //contains() checa se o texto informado contem string do parametro
 
         //System.out.println(var3.strip()); //  strip remove os espaços do começo e do fina do texto
-        //String [] splitted = var3.split( " "); // split() ira quebrar o textro no delimitador informado e retornar uma lista das palavras
+        //String[] splitted = var3.split(" "); // split() ira quebrar o textro no delimitador informado e retornar uma lista das palavras
 
        // System.out.println(var3.substring(5, 8) ); // pega os numeros entre eles
 

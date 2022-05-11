@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Exercicios6 {
     public static void main(String[] args) {
-        exe08();
+        exe07();
     }
 
     public static void exe01() {
@@ -200,7 +200,7 @@ public class Exercicios6 {
         boolean b = true;
         int d = 0;
         int c = 3;
-        while (d <= c){
+        while (d <= c) {
 
             System.out.println("Insira seu pin:");
             int pin = in.nextInt();
@@ -212,9 +212,9 @@ public class Exercicios6 {
             } else {
                 System.err.println("Você inseriu a senha incorreta");
                 d++;
-                System.err.println("você tem mais "+ d + "/3");
+                System.err.println("você tem mais " + d + "/3");
             }
-            if (d == 3){
+            if (d == 3) {
                 System.err.println("Você bloqueou seu pin");
                 break;
             }
@@ -226,60 +226,98 @@ public class Exercicios6 {
 
     public static void exe07() {
         Scanner in = new Scanner(System.in);
-        String [][] b = {{"-","-", "-"},
-                {"-","-" , "-"},
-                {"-", "-", "-"},
-    };
+        String[][] b = new String[3][3];
 
-        boolean jogun = true;
+        int jogun = 1;
+        boolean n = true;
 
 
-            while(jogun == true) {
-                System.out.println("informe o valor de 0 a 9");
-                int r = in.nextInt();
 
-                if (r <= 9) {
-                    switch (r) {
-                        case 1:
+        while (n == true) {
+            System.out.println("informe o valor de 1 a 9");
+            int r = in.nextInt();
+
+
+                switch (r) {
+                    case 1:
+                        if (jogun == 1) {
+                            b[0][0] = "o";
+                        } else {
                             b[0][0] = "X";
-                            break;
-                        case 2:
+                        }
+                        n = false;
+
+                    case 2:
+                        if (jogun == 1) {
+                            b[0][1] = "o";
+                        } else {
                             b[0][1] = "X";
-                            break;
-                        case 3:
+                        }
+                        n = false;
+
+
+                    case 3:
+                        if (jogun == 1) {
+                            b[0][2] = "o";
+                        } else {
                             b[0][2] = "X";
-                            break;
-                        case 4:
-                            b[0][3] = "X";
-                            break;
-                        case 5:
+                        }
+                        n = false;
+
+                    case 4:
+                        if (jogun == 1) {
+                            b[1][0] = "o";
+                        } else {
                             b[1][0] = "X";
-                            break;
-                        case 6:
+                        }
+                        n = false;
+
+                    case 5:
+                        if (jogun == 1) {
+                            b[1][1] = "o";
+                        } else {
                             b[1][1] = "X";
-                            break;
-                        case 7:
+                        }
+                    case 6:
+                        if (jogun == 1) {
+                            b[1][2] = "o";
+                        } else {
                             b[1][2] = "X";
-                            break;
-                        case 8:
+                        }
+                        n = false;
+                    case 7:
+                        if (jogun == 1) {
+                            b[2][0] = "o";
+                        } else {
                             b[2][0] = "X";
-                            break;
-                        case 9:
+                        } n = false;
+                    case 8:
+                        if (jogun== 1) {
+                            b[2][1] = "o";
+                        } else {
                             b[2][1] = "X";
-                        case 10:
+                        } n = false;
+                    case 9:
+                        if (jogun== 1) {
+                            b[2][2] = "o";
+                        } else {
                             b[2][2] = "X";
+                        } n = false;
+                    default: {
+                        System.out.println("Coloque um valor de 1 a 9");
                     }
-
-                }else {
-                    System.out.println("insira algo valido");
-                    break;
                 }
-                System.out.println(b);
-            }
-
 
 
         }
+        }
+
+
+
+
+
+
+
     public static void exe08() {
         Scanner in = new Scanner(System.in);
 
@@ -300,7 +338,16 @@ public class Exercicios6 {
         System.out.println("A soma  de 1 a " + f + " é " + soma);
     }
 
+    public static void exe09() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("digite seu nome");
+        String nome = in.nextLine();
+        String[] separado = nome.split(" ");
+        System.out.println( separado[0].charAt(0) +". "+  separado[1].charAt(0) +". ");
+
+
     }
+}
 
 
 
