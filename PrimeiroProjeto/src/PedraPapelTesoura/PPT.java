@@ -109,12 +109,12 @@ public class PPT {
             achou = false;
             System.out.println();
         }
-        if(erros==6)
         {
             System.out.println("Você foi enforcado!");
             System.out.println("A palavra era: " +palavraDesconhecida);
         }
-        else
+     //   if(erros==6)
+       // else
         {
             System.out.println("PARABÉNS, você acertou a palavra!");
         }
