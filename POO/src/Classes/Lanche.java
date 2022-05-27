@@ -26,5 +26,6 @@ public abstract class Lanche {
             }
         }
         System.out.println("---------------");
+
     }
 }

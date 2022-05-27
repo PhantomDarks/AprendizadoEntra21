@@ -1,6 +1,7 @@
 package Classes;
 
-public class XBurguer  extends Lanche {
+public class XBurguer  extends Sanduiches
+{
 
     public boolean aberto;
 
@@ -13,5 +14,12 @@ public class XBurguer  extends Lanche {
         this.tipo = "XBurguer";
     }
 
+    @Override
+    public void montarComanda() {
+        super.montarComanda();
+        if (this.aberto) {
+            System.out.println("- LANCHE ABERTO --");
+        }
 
+    }
 }

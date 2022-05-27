@@ -1,6 +1,6 @@
 package Classes;
 
-public class MistoQuente extends Lanche{
+public class MistoQuente extends Sanduiches{
 
     public MistoQuente(){
         this.adicionarIngrediente("Queijunto");
