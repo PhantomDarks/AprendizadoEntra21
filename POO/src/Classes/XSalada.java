@@ -11,12 +11,5 @@ public class XSalada extends XBurguer {
         this.tipo = "XSalada";
 
     }
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.aberto) {
-            System.out.println("- LANCHE ABERTO --");
-        }
 
-    }
 }

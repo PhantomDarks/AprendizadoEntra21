@@ -1,6 +1,6 @@
 package Classes;
 
-public class HotDog extends Lanche{
+public class HotDog extends Sanduiches{
 
     public HotDog(){
 
