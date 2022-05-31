@@ -7,6 +7,6 @@ public class HotDog extends Sanduiches{
         this.adicionarIngrediente("Pão");
         this.adicionarIngrediente("Salsicha");
         this.adicionarIngrediente("Repolho");
-        this.tipo = "HotDog";
+        this.setTipo("HotDog");
     }
 }

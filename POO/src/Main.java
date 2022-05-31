@@ -1,5 +1,6 @@
 import Classes.*;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +13,7 @@ public class Main {
         System.out.println("(3)- Misto quente");
         System.out.println("(4)- Hotdog");
         System.out.println("(5)- MinePizza");
+        System.out.println("(6)- Pizza");
         Lanche lanche = null;
 
         int escolha = in.nextInt();
@@ -37,7 +39,9 @@ public class Main {
                 break;
             case 5:
                 lanche = new MinePizza();
+            case 6:
 
+                lanche = new Pizza();
                 break;
             default:
                 System.err.println("Escolha uma opção valida!");
@@ -46,16 +50,55 @@ public class Main {
         if (escolha == 1 || escolha == 2) {
             System.out.println("lanche aberto? (S/N):");
             String aberto = in.nextLine();
-            ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+            ((XBurguer) lanche).setAberto(aberto.equalsIgnoreCase("S"));
 
         } else if (escolha == 5) {
-            System.out.print("Deseja sem bora ou com? S/N");
-            String Receba = in.nextLine();
+            System.out.println("Deseja qual sabor?");
+            System.out.println("(1) - 4 Queijos");
+            System.out.println("(2) - Calapreza");
+            System.out.println("(3) - Frango com catupiri");
+            System.out.println("(4) - Marguerita");
+            System.out.println("(5) - Portuguesa");
+            int sabor = in.nextInt();
+            in.nextLine();
             MinePizza miniPizza = ((MinePizza) lanche);
-            miniPizza.Borda = Receba.equalsIgnoreCase("S");
-            if (miniPizza.Borda) {
+            switch (sabor) {
+                case 1:
+                    miniPizza.AdicionarSaborEIngredientes("4 QUEIJOS");
+                    break;
+                case 2:
+                    miniPizza.AdicionarSaborEIngredientes("calapreza");
+                    break;
+                case 3:
+                    miniPizza.AdicionarSaborEIngredientes("frango com catupiri");
+                    break;
+                case 4:
+                    miniPizza.AdicionarSaborEIngredientes("marguerita");
+                    break;
+                case 5:
+                    miniPizza.AdicionarSaborEIngredientes("portuguesa");
+                    break;
+                default:
+                    System.err.println("!!!!!!!escolha algo valido!!!!!!!!!");
+            }
+            if (lanche instanceof Pizza){
+                System.out.println("Informe o tamanho da pizza:");
+                System.out.println("XS- BROTO");
+                System.out.println("SM - pequena");
+                System.out.println("MD - media");
+                System.out.println("LG - grande");
+                System.out.println("XL - familia");
+                ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());//armazena um valor para uma public string fora da main
+
+            }
+
+            System.out.print("Deseja sem borDa ou com? S/N");
+            String Receba = in.nextLine();
+
+            miniPizza.setBorda( Receba.equalsIgnoreCase("S"));
+            if (miniPizza.isBorda()) {
                 System.out.println("Informe o sabor");
-                miniPizza.Sabor = in.nextLine();
+                miniPizza.setSabor(in.nextLine());
             }
 
         }
@@ -66,7 +109,7 @@ public class Main {
             //qual o adicional
             // add.adicionarAdicional()
             // perguntar se quer continuar
-            if (Receba.equalsIgnoreCase("S")){
+            if (Receba.equalsIgnoreCase("S")) {
                 System.out.print("Deseja quantas adicionais?");
                 int Receba2 = in.nextInt();
                 in.nextLine();
@@ -79,10 +122,19 @@ public class Main {
                     //pedir se deseja continuar
                 }
             }
+            if (escolha == 5 || escolha == 6) {
+                System.out.println("Deseja qual sabor?");
+                System.out.println("(1) 4 Queijos");
+                System.out.println("(2) Calapreza");
+                System.out.println("(3) Frango com catupiri");
+                System.out.println("(4) Marguerita");
+                System.out.println("(5) Portuguesa");
+                int sabor = in.nextInt();
 
+            }
         }
         System.out.println("Informe o valor do lanche R$: ");
-        lanche.valor = in.nextDouble();
+        lanche.setValor(String.valueOf(in.nextDouble()));
         lanche.montarComanda();
     }
 }
