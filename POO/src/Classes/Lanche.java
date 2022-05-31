@@ -1,10 +1,10 @@
 package Classes;
 
 public abstract class Lanche {
-    public String[] ingredientes = new String[10];
-    public double valor;
+    private String[] ingredientes = new String[10];
+    private double valor;
 
-    public  String tipo;
+    private   String tipo;
 
 
     public  void  adicionarIngrediente(String ingredientes){
@@ -17,7 +17,11 @@ public abstract class Lanche {
         }
     }
     public void montarComanda(){
-        System.out.println("===="+this.tipo+"====");
+        if (this instanceof MinePizza){
+            System.out.println("===="+ this.tipo + " - " + ((MinePizza)this).getSabor()+ "====");
+        } else {
+            System.out.println("===="+this.tipo+"====");
+        }
         System.out.printf("Valor: R$%.2f\n", this.valor);
         System.out.println("-INGREDIENTES-");
         for (String ingrediente: this.ingredientes){
@@ -27,5 +31,20 @@ public abstract class Lanche {
         }
         System.out.println("---------------");
 
+    }
+    public void setValor(String Valor){
+        this.valor = valor;
+
+    }
+    public double getValor(){
+
+        return  this.valor;
+    } public void setTipo(String Tipo){
+        this.tipo = tipo;
+
+    }
+    public String getTipo(String mistoQuente){
+
+        return  this.tipo;
     }
 }

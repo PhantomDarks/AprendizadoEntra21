@@ -3,7 +3,7 @@ package Classes;
 public class XBurguer  extends Sanduiches
 {
 
-    public boolean aberto;
+    private boolean aberto;
 
     public XBurguer() {
 
@@ -11,7 +11,7 @@ public class XBurguer  extends Sanduiches
         this.adicionarIngrediente("Queijunto");
         this.adicionarIngrediente("Preijo");
         this.adicionarIngrediente("Pão");
-        this.tipo = "XBurguer";
+        this.setTipo( "XBurguer");
     }
 
     @Override
@@ -20,6 +20,13 @@ public class XBurguer  extends Sanduiches
         if (this.aberto) {
             System.out.println("- LANCHE ABERTO --");
         }
+
+    }
+    public void setAberto(boolean aberto){
+        this.aberto = aberto;
+    }
+    public boolean getAberto(boolean s){
+        return this.aberto;
 
     }
 }

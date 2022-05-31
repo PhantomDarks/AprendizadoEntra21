@@ -2,7 +2,7 @@ package Classes;
 
 public abstract class Sanduiches extends Lanche {
 
-    public String[] adicionais = new String[10];
+    private String[] adicionais = new String[10];
 
 
     public void adicionarAdicional(String adicionar) {
