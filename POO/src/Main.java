@@ -1,13 +1,32 @@
+import Classes.Cliente.Cliente;
 import Classes.Lanche.*;
 
 import java.util.Scanner;
 
 public class Main {
-    public static  Scanner in = new Scanner(System.in);
+    public static Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
-        montarLanche();
+        Cliente cl = new Cliente();
+        System.out.println("Digite o nome do cliente:");
+        cl.setNome(in.nextLine());
+        for (int i = 0; i < 10; i++) {
+            cl.getPedido().adicionarLanche(montarLanche());
+            System.out.println("Deseja mais um lanche?(S/N)");
+            if (i == 9) {
+                break;
+            }
+                if (in.nextLine().equalsIgnoreCase("N")) {
+                    break;
+
+                }
+
+        }
+        System.out.println("Cliente:"+cl.getNome());
+    cl.getPedido().imprimirComanda();
     }
-    private static  void montarLanche(){
+
+    private static Lanche montarLanche() {
         Scanner in = new Scanner(System.in);
         System.out.println("-MENU: Escolha uma opção");
         System.out.println("(1)- X-Salada");
@@ -41,6 +60,7 @@ public class Main {
                 break;
             case 5:
                 lanche = new MinePizza();
+                break;
             case 6:
 
                 lanche = new Pizza();
@@ -54,7 +74,7 @@ public class Main {
             String aberto = in.nextLine();
             ((XBurguer) lanche).setAberto(aberto.equalsIgnoreCase("S"));
 
-        } else if (escolha == 5) {
+        } else if (escolha >= 5) {
             System.out.println("Deseja qual sabor?");
             System.out.println("(1) - 4 Queijos");
             System.out.println("(2) - Calapreza");
@@ -90,17 +110,17 @@ public class Main {
                 System.out.println("MD - media");
                 System.out.println("LG - grande");
                 System.out.println("XL - familia");
-                ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());//armazena um valor para uma public string fora da main
+                ((Pizza) lanche).setTamanho(in.nextLine().toUpperCase());//armazena um valor para uma public string fora da main
 
             }
 
             System.out.print("Deseja sem borDa ou com? S/N");
             String Receba = in.nextLine();
 
-            miniPizza.setBorda( Receba.equalsIgnoreCase("S"));
+            miniPizza.setBorda(Receba.equalsIgnoreCase("S"));
             if (miniPizza.isBorda()) {
                 System.out.println("Informe o sabor");
-                miniPizza.setSabor(in.nextLine());
+                miniPizza.setSaborBorda(in.nextLine());
             }
 
         }
@@ -136,6 +156,8 @@ public class Main {
             }
         }
         System.out.println("Informe o valor do lanche R$: ");
-        lanche.setValor(String.valueOf(in.nextDouble()));
+        lanche.setValor(in.nextDouble());
+        in.nextLine();
+        return lanche;
     }
 }
