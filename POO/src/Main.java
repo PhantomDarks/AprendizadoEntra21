@@ -1,11 +1,13 @@
-import Classes.*;
+import Classes.Lanche.*;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+    public static  Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
-
+        montarLanche();
+    }
+    private static  void montarLanche(){
         Scanner in = new Scanner(System.in);
         System.out.println("-MENU: Escolha uma opção");
         System.out.println("(1)- X-Salada");
@@ -135,6 +137,5 @@ public class Main {
         }
         System.out.println("Informe o valor do lanche R$: ");
         lanche.setValor(String.valueOf(in.nextDouble()));
-        lanche.montarComanda();
     }
 }

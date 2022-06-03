@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Lanche;
 
 public class XBurguer  extends Sanduiches
 {
@@ -14,14 +14,10 @@ public class XBurguer  extends Sanduiches
         this.setTipo( "XBurguer");
     }
 
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.aberto) {
-            System.out.println("- LANCHE ABERTO --");
-        }
-
+    public boolean isAberto() {
+        return aberto;
     }
+
     public void setAberto(boolean aberto){
         this.aberto = aberto;
     }

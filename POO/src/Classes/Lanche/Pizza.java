@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Lanche;
 
 public class Pizza extends MinePizza {
     private String tamanho;
@@ -7,10 +7,7 @@ public class Pizza extends MinePizza {
         this.setTipo( "Pizza");
     }
 
-    public void montarComanda() {
-        super.montarComanda();
-        System.out.println("Tamanho: " + this.tamanho);
-    }
+
 public void setTamanho(String tamanho){
 
         this.tamanho = tamanho;

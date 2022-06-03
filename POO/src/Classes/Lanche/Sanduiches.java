@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Lanche;
 
 public abstract class Sanduiches extends Lanche {
 
@@ -14,16 +14,13 @@ public abstract class Sanduiches extends Lanche {
         }
     }
 
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        for (int i = 0; i < 10; i++) {
-            if (this.adicionais[i] != null) {
-                System.out.println(adicionais[i]);
-            }
-        }
+    public String[] getAdicionais() {
+        return adicionais;
     }
 
+    public void setAdicionais(String[] adicionais) {
+        this.adicionais = adicionais;
+    }
 }
 
 

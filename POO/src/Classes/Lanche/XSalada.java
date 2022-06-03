@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Lanche;
 
 public class XSalada extends XBurguer {
 
@@ -11,5 +11,6 @@ public class XSalada extends XBurguer {
         this.setTipo("XSalada");
 
     }
+
 
 }

@@ -1,6 +1,4 @@
-package Classes;
-
-import java.util.Locale;
+package Classes.Lanche;
 
 public class MinePizza extends Lanche {
     private boolean Borda;
@@ -13,6 +11,7 @@ public class MinePizza extends Lanche {
         this.adicionarIngrediente("CascaDeEucalipso");
         this.setTipo("MinePizza");
     }
+
 
     public void AdicionarSaborEIngredientes(String batata) {
         this.Sabor = batata;
@@ -42,16 +41,6 @@ public class MinePizza extends Lanche {
 
     }
 
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.Borda) {
-            System.out.println("-- Borda --");
-            System.out.println("-Borda recheada: " + SaborBorda);
-
-        }
-
-    }
 
     public void setBorda(boolean borda) {
         this.Borda = borda;
@@ -70,10 +59,12 @@ public class MinePizza extends Lanche {
         return this.SaborBorda;
 
     }
-        public void setSabor(String Sabor){
+
+    public void setSabor(String Sabor) {
         this.Sabor = Sabor;
-        }
-        public  String getSabor(){
+    }
+
+    public String getSabor() {
         return this.Sabor;
-        }
+    }
 }
