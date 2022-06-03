@@ -1,4 +1,4 @@
-package Classes;
+package Classes.Lanche;
 
 public class MistoQuente extends Sanduiches{
 
