@@ -3,11 +3,14 @@ package Classes;
 import java.util.UUID;
 
 public class Tarefa {
+    private ChecklistItem[] item;
     private String uuid;
     private String nome;
     private String deescrição;
     private boolean completa;
-    private int Ordem = 0;
+
+
+    private int Ordem;
 
 
     public Tarefa() {
@@ -16,11 +19,24 @@ public class Tarefa {
 
     public void completar() {
         setCompleta(true);
-
+for (ChecklistItem item : this.getItem()){
+    if (item != null){
+        item.completar();
     }
-    // GETTER & SETTER
+}
+    }
 
-    public  void setNome(String nome) {
+    // GETTER & SETTER
+    public int getOrdem() {
+        return Ordem;
+    }
+
+    public void setOrdem(int ordem) {
+        Ordem = ordem;
+    }
+
+
+    public void setNome(String nome) {
         this.nome = nome;
 
     }
@@ -45,8 +61,34 @@ public class Tarefa {
         this.uuid = uuid;
     }
 
+    public ChecklistItem[] getItem() {
+        return item;
+    }
+
+    public void setItem(ChecklistItem[] item) {
+        this.item = item;
+    }
+
     public String getUuid() {
         return this.uuid;
+
+    }
+    public void criarChecklist(int tamanho){
+this.setItem(new ChecklistItem[tamanho]);
+
+    }
+    public boolean temChecklist() {
+        return this.getItem() != null;
+
+    }
+    public boolean adicionarCheklistItem(ChecklistItem item) {
+        for (int i = 0; i < this.getItem().length; i++) {
+            if (this.getItem()[i] == null) {
+                this.getItem()[i] =item;
+                return true;
+            }
+        }
+        return false;
 
     }
 
@@ -57,5 +99,6 @@ public class Tarefa {
     public String getdeescrição() {
         return this.deescrição;
     }
+
 }
 
