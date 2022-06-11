@@ -25,8 +25,8 @@ public abstract class Lanche {
         this.ingredientes = ingredientes;
     }
 
-    public void setValor(String Valor) {
-        this.valor = valor;
+    public void setValor(Double Valor) {
+        this.valor = Valor;
 
     }
 
@@ -36,7 +36,7 @@ public abstract class Lanche {
     }
 
     public void setTipo(String Tipo) {
-        this.tipo = tipo;
+        this.tipo = Tipo;
 
     }
 
