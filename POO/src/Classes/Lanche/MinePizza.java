@@ -67,4 +67,9 @@ public class MinePizza extends Lanche {
     public String getSabor() {
         return this.Sabor;
     }
+
+    @Override
+    public void mostrarDetalhesComanda() {
+
+    }
 }

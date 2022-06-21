@@ -9,4 +9,9 @@ public class MistoQuente extends Sanduiches{
         this.setTipo("MistoQuente");
 
     }
+
+    @Override
+    public void mostrarDetalhesComanda() {
+
+    }
 }
