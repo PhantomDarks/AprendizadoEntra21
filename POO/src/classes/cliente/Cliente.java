@@ -1,15 +1,14 @@
-package Classes.Cliente;
+package classes.cliente;
 
-import Classes.Pedido.Pedido;
+import classes.pedido.Pedido;
 
 public class Cliente {
-
-    public Cliente(){
-        this.setPedido(new Pedido());
-
-    }
     private String nome;
     private Pedido pedido;
+
+    public Cliente() {
+        this.setPedido(new Pedido());
+    }
 
     public String getNome() {
         return nome;
