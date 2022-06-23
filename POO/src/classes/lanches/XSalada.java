@@ -1,16 +1,13 @@
-package Classes.Lanche;
+package classes.lanches;
 
 public class XSalada extends XBurguer {
 
-    public XSalada(){
+    public XSalada() {
         this.adicionarIngrediente("Alface");
         this.adicionarIngrediente("Tomate");
-        this.adicionarIngrediente("Milho");
         this.adicionarIngrediente("Picles");
         this.adicionarIngrediente("Maionese");
         this.setTipo("XSalada");
-
     }
-
 
 }
