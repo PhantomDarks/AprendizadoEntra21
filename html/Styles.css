@@ -1,0 +1,157 @@
+*{font-family: Arial;}
+
+
+body{
+   
+    background-color: rgb(0, 0, 0);
+
+}a{
+     color:rgb(255, 255, 255);/*letras */
+    transition: 0.5s;
+}
+
+*{
+    font-family: 'Poppins';
+}
+h2 {
+    animation: colorRotate 0.5s infinite 0s;
+}
+*{
+    
+    color: rgb(0, 136, 255);
+}
+table.contained{
+
+}
+table{
+    /* border:2px socontainedlid rgb(49, 49, 49); */
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    width: 100%;
+border-spacing: 0;
+border-collapse: collapse;
+
+}
+th{
+    text-align: start;
+    background-color: #fffbfb;
+    padding: 8px 4px;
+}
+tfoot tr.sum td{
+    text-align:right;
+    ;
+}
+small{
+    color: #f0e5e5;
+    font-size: 8px ;
+}
+tr{
+border-bottom:1px solid rgb(49, 49, 49);
+
+
+}
+tfoot tr{
+border: 0;
+
+}
+td:first-child{
+    width: 50%;
+}
+td:nth-child(2){
+    width: 40%;
+    
+}
+td:last-child{
+    width: 10%;
+    
+}
+.edit-cell a{
+    text-decoration: none;
+    background-color: rgb(255, 246, 238);
+    padding: 4px 8px;
+    display: inline-block;
+    color: black;
+    border-radius: 8px;
+}
+.edit-cell a:hover{
+    text-decoration: none;
+    background-color: rgb(187, 186, 184);
+    padding: 4px 8px;
+    display: inline-block;
+    color: rgb(3, 3, 3);
+    border-radius: 8px;
+
+}
+  
+td.rainbow a {
+    animation: none;
+}
+
+td.rainbow a:hover {
+    animation: colorRotate 0.5s infinite 0s;
+}
+  
+@keyframes colorRotate {
+    0% {
+        color: blue;
+        border-color:  darkred;
+        
+    }
+    10% {
+     color: blueviolet;
+     border-color: darkturquoise;
+    
+    }
+    50% {
+        color: brown;
+        border-color: lawngreen;
+    }
+    85% {
+        color: chartreuse;
+        border-color: darkmagenta;
+    }
+    100% {
+        color: crimson;
+        border-color: darkorange;
+    }
+
+     
+  }
+img{
+    
+    animation: colorRotate 0.5s infinite 0s;
+}
+a {
+    animation: none;
+}
+
+ a:hover {
+    animation: colorRotate 0.5s infinite 0s;
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    ul.nadaslist {
+        margin: 0 48px;
+    }
+    ul.nadaslist li {
+display: block;
+    }
+   
+}
+.btn{
+    border: 0;
+    animation: colorRotate 0.5s infinite 0s;
+    background-color: transparent;
+    padding: 8px 16px;
+}
+
+.btn.btn-sucess:hover{
+    animation: step-end;
+    background-color: rgb(100, 220, 100);
+}
+.btn.btn.btn-sucess:active{
+    animation: step-end;    
+    background-color: rgb(154, 216, 154);
+}
