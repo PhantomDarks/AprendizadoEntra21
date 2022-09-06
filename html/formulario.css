@@ -1,0 +1,71 @@
+body{
+    background-image: url(https://images5.alphacoders.com/116/1164046.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+}
+
+
+html, body {
+    margin: 0;
+}
+
+h3,h1{
+    color:aliceblue;
+   
+
+}
+h1{
+    margin: 0 100px 10px;
+       animation: colorRotate 0.5s infinite 1s;
+}
+#tagForm{
+    border: 3px groove black;
+    border-radius: 10px;
+    background-image: url(https://miro.medium.com/max/1174/1*4LG9CZUb60hX0YL_0Ks8-Q.jpeg);
+    background-position: left;
+    animation: colorRotate 1s infinite 1s;
+    padding: 20px ;
+    text-shadow: 2px 2px black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+
+@keyframes colorRotate {
+    0% {
+        color: blue;
+        border-color:  darkred;
+        
+    }
+    10% {
+     color: blueviolet;
+     border-color: darkturquoise;
+    
+    }
+    50% {
+        color: brown;
+        border-color: lawngreen;
+    }
+    85% {
+        color: chartreuse;
+        border-color: darkmagenta;
+    }
+    100% {
+        color: crimson;
+        border-color: darkorange;
+    }
+
+    
+}
+#imgt
+{
+ margin-left: 600px; 
+}

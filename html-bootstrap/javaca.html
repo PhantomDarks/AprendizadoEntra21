@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+   async function asyncMsg(){
+       
+       Document.getElementById("async")
+       .innerHTML = await getMsg();
+       Document.getElementById("async_btn").style =
+        "display:none;";
+   
+}
+    function getMsg(){
+        return new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve("Eu<3Js");
+            }, 5000)
+        })
+    }
+    
+   
+
+</script>
+</head>
+<body>
+   <div id = "texto"></div>
+   <input type="text" name="teste" id="input-txt">
+   <button>Enviar</button>
+   
+   <div id="async"></div>
+   <button onclick="asyncMsg()">Mensagem</button>
+</body>
+</html>

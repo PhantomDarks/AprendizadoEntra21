@@ -1,0 +1,64 @@
+*{font-family: Arial;}
+
+
+body{
+
+margin: 0px 600px 0;
+background-color: black;
+
+}
+h1, h2, h3, h4, h5,h6{
+   
+    color: aliceblue;
+    border: 1px;
+    border-color: rgb(12, 12, 12);
+    background-color: rgb(0, 0, 0);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    
+    margin-bottom: 5px;
+}h1{
+    animation: colorRotate 0.5s infinite 1s;
+}
+h2{
+    animation: colorRotate 0.5s infinite 2s;
+    
+   
+}h3{   
+    animation: colorRotate 0.5s infinite 3s;
+}h4{
+    animation: colorRotate 0.5s infinite 4s;
+    
+}h5{
+    animation: colorRotate 0.5s infinite 5s;
+   
+}h6{
+  
+    animation: colorRotate 0.5s infinite 6s;
+}
+
+
+@keyframes colorRotate {
+    0% {
+        box-shadow: 4px 3px 5px 1px rgb(255, 208, 0);
+      color: aqua;
+    }
+    10% {
+     
+        box-shadow: 4px 3px 5px 1px rgb(255, 0, 98);
+    
+    }
+    50% {
+        box-shadow: 4px 3px 5px 1px rgb(231, 4, 201);
+      
+    }
+    75% {
+        box-shadow: 4px 3px 5px 1px rgb(5, 1, 236);
+      
+    }
+    100% {
+        box-shadow: 4px 3px 5px 1px rgb(13, 212, 79);
+        color:red;
+    }
+}
